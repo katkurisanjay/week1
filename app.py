@@ -1,5 +1,5 @@
 import streamlit as st  
-from wasteclassification import load_images  # Import your functions from the Jupyter notebook  
+# from wasteclassification import load_images  # Import your functions from the Jupyter notebook  
 
 def main():  
     st.title("My Jupyter Notebook App")  
@@ -8,7 +8,7 @@ def main():
     st.write("Welcome to my Streamlit app!")  
     
     # Call your main function from the notebook  
-    result = load_images()  
+    result = "Hello"  # load_images()
     
     # Display the result  
     st.write(result)  
