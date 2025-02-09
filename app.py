@@ -6,25 +6,37 @@ import time
 
 
 def main():  
-    st.title("My Jupyter Notebook App")  
-    
-    # Add your content here, for example:  
-    st.write("Welcome to my Streamlit app!")  
-    
-    # Call your main function from the notebook  
-    result = "Hello"  # load_images()
-    
-    # Display the result  
-    st.write(result)  
-    df = pd.DataFrame(np.random.randn(15, 3), columns=(["A", "B", "C"]))
-    my_data_element = st.line_chart(df)
+    # Set the title and layout  
+    st.set_page_config(page_title="Waste Classification using CNN", layout="centered")  
+    st.title("♻️ Waste Classification using CNN")  
+    st.markdown("Upload an image for classification")  
 
-    for tick in range(10):
-        time.sleep(.5)
-        add_df = pd.DataFrame(np.random.randn(1, 3), columns=(["A", "B", "C"]))
-        my_data_element.add_rows(add_df)
+    # Image upload section  
+    uploaded_file = st.file_uploader(  
+        "Drag and drop file here or Browse files",   
+        type=["jpg", "png", "jpeg"],   
+        help="Limit 200MB per file"  
+    )  
 
-    st.button("Regenerate")
+    # URL input section  
+    image_url = st.text_input("Or enter an Image URL for Classification:")  
+
+    # Classification button  
+    if st.button("Classify Image"):  
+        if uploaded_file is not None:  
+            # Code to process the uploaded image  
+            st.success("Image uploaded successfully!")  
+            # You can add your model prediction code here  
+        elif image_url:  
+            # Code to process the image URL  
+            st.success("Image URL accepted!")  
+            # You can add your model prediction code here  
+        else:  
+            st.error("Please upload an image or enter a URL.")  
+
+    # Trainer credits  
+    st.markdown("Trainer Credits: RMS")  
+    st.markdown("Developed with ❤ for AICTE Internship Cycle 3 from RMS")
     
 if __name__ == "__main__":  
     main()
