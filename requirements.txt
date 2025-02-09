@@ -4,4 +4,3 @@ matplotlib
 tqdm
 opencv-python-headless
 streamlit
-cv2
