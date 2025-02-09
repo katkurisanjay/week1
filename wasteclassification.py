@@ -6,11 +6,9 @@ import cv2
 from tqdm import tqdm
 import warnings
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Activation, Dropout, Flatten, Dense, BatchNormalization
-from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
-from keras.utils import plot_model
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Activation, Dropout, Flatten, Dense
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from glob import glob
-from cv2 import cvtColor
 
 warnings.filterwarnings('ignore')
 
@@ -59,8 +57,6 @@ def load_images():
 
     """
 
-    from tensorflow.keras.models import Sequential
-    from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Activation, Dropout
 
     # Define the CNN model
     model = Sequential()
@@ -102,7 +98,6 @@ def load_images():
     # Print model summary
     model.summary()
 
-    from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
     # Define image data generators
     train_datagen = ImageDataGenerator(rescale= 1./225)
