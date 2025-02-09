@@ -1,7 +1,7 @@
 import streamlit as st  
 import numpy as np
 import matplotlib.pyplot as plt
-import cv2
+from cv2 import cv2
 from huggingface_hub import hf_hub_download
 import tensorflow as tf
 # Define the repository ID and filename
