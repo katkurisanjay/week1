@@ -1,8 +1,5 @@
 import streamlit as st  
-# from wasteclassification import load_images  # Import your functions from the Jupyter notebook  
-import pandas as pd
 import numpy as np
-import time
 import matplotlib.pyplot as plt
 import cv2
 from huggingface_hub import hf_hub_download
