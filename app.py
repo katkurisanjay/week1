@@ -1,7 +1,6 @@
 import streamlit as st  
 import numpy as np
 import matplotlib.pyplot as plt
-from cv2 import cv2
 from huggingface_hub import hf_hub_download
 import tensorflow as tf
 # Define the repository ID and filename
@@ -15,6 +14,7 @@ model = tf.keras.models.load_model(model_path)
 def predict_fun(img):
     plt.figure(figsize=(6,4))
     # Change 'cv2.Color' to 'cv2.cvtColor'
+    from cv2 import cv2
     plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     plt.tight_layout()
     img = cv2.resize(img,(224,224))
