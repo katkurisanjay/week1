@@ -1,0 +1,6 @@
+opencv-python
+pandas
+matplotlib
+tqdm
+opencv-python-headless
+streamlit
